@@ -14,7 +14,7 @@ public class HomeWorkApp_lesson1 {
         myMethodToSwapElements(array, 0, 4);           // Не понял сути задания №1 и сделал как получилось
 
         System.out.println(myMethodArrayToArraylist(array));    // Задание №2
-        
+
         Apple[] apples = {new Apple(), new Apple(), new Apple()};
         Orange[] oranges = {new Orange(), new Orange()};
 
