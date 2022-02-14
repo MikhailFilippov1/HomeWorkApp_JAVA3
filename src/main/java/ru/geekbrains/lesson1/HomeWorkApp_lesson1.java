@@ -43,7 +43,7 @@ public class HomeWorkApp_lesson1 {
 
     public static ArrayList myMethodArrayToArraylist(Object[] array){
         ArrayList<Object> arrayList = new ArrayList<>(Arrays.asList(array));
-        arrayList.add(6);
+//        arrayList.add(6);
         return arrayList;
     }
 }
