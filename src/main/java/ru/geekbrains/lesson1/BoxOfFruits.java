@@ -17,7 +17,7 @@ public class BoxOfFruits<X extends Fruit> {
     }
 
     public double getWeightOfBox() {
-        double weightOfBox = 0.0;
+        double weightOfBox = 0.0;               //Обнуляем при каждом обращении
         if (this.fruits.size() == 0)return 0;
         for (X fruit : fruits) {
             weightOfBox += fruit.getWeight();
