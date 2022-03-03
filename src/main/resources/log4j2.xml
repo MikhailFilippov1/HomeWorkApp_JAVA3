@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration xlmns="http://logging.apache.org/log4j/2.0/config">
+    <Properties>
+        <Property name="basePath">logs</Property>
+    </Properties>
+
+    <Appenders>
+
+        <File name="FILE1" filename="${basePath}/log_for_HW6.log" append="true" >
+            <PatternLayot>
+                pattern = "%-5p %d{yyyy-mm-dd | HH:mm:ss} [%t] %C (%F:%L) - %m%n
+            </PatternLayot>
+        </File>
+        <File name="FILE2" filename="${basePath}/log_file2_HW6.log" append="true" >
+            <PatternLayot>
+                pattern = "%-5p %d{yyyy-mm-dd | HH:mm:ss} [%t] %C (%F:%L) - %m%n
+            </PatternLayot>
+        </File>
+
+        <Console name="STDOUT" target="SYSTEM_OUT">
+                <PatternLayout>
+                    pattern = "%-5p %d{dd-mm-yy | HH:mm:ss:masses} blah-blah [%t] ____ %C (%F:%L) - %m%n
+                </PatternLayout>
+        </Console>
+    </Appenders>
+
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="FILE1"/>
+        </Root>
+        <Logger name="src/main/java/ru/geekbrains/lesson6/HomeWorkLesson6_Log.java" level="warn" additivity="false">
+            <AppenderRef ref="FILE2"/>
+        </Logger>
+
+    </Loggers>
+    
+</Configuration>
